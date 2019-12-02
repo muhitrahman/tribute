@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+	<title>Tribute Page</title>
+    <link rel="stylesheet" href="../css/jquery.rotatingSlideshow.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">  
+
+</head>
+
+
+<body>
+<div class="container-fluid">
+    <div class="topnav sticky-top" id="myTopnav" align="center">
+    
+    <div class="social-buttons">
+        <a href="#" class="btn btn-github"><i class="fa fa-github"></i></a>
+        <a href="#" class="btn btn-linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="btn btn-youtube"><i class="fa fa-youtube-play"></i></a>
+    </div>
+    
+    </div>
+</div>
+<!--	<div class="rotating-slideshow fluid" style="margin-top: 50px">-->
+	<div class="rotating-slideshow">
+	    <div id="slider-main" data-position="1" data-deg="0">
+	        <div id="slider-btns" class="button">
+	            <a id="pos1" class="pos1" data-position="1"></a>
+	            <a id="pos2" class="pos2" data-position="4"></a>
+	            <a id="pos3" class="pos3" data-position="3"></a>
+	            <a id="pos4" class="pos4" data-position="2"></a>
+	        </div>
+	        <div class="slider-overlay">
+	            <div class="active" data-position="1">
+	                <h3>Home</h3>
+	                <p>Kurt Gödel theorem is the third leg of tripod, together with Heisenberg's uncertainty principle and Einstein's relativity to change the human thoughts forever. The three discoveries appear to deliver us into an unfamiliar, one so odds with our previous assumptions and intuitions that, nearly a century on, we are still struggling to make out where, exactly, we have landed.</p>
+	            </div>
+	            <div data-position="2">
+	                <h3>About</h3>
+	                <p>Kurt Gödel (April 28, 1906 – January 14, 1978) was an Austrian, and later American, logician, mathematician, and philosopher. Considered along with Aristotle to be one of the most significant logicians in human history. Gödel made an immense impact upon scientific and philosophical thinking in the 20th century. Gödel published his two incompleteness theorems in 1931 when he was 25 years old, one year after finishing his doctorate at the University of Vienna.</p>
+	            </div>
+	            <div data-position="3">
+	                <h3>Legacies</h3>
+	                <p>Gödel was awarded the first Albert Einstein Award in 1951, and was also awarded the National Medal of Science, in 1974. Gödel was elected a Foreign Member of the Royal Society in 1968. He was a Plenary Speaker of the ICM in 1950 in Cambridge, Massachusetts. The Gödel Prize, an annual prize for outstanding papers in the area of theoretical computer science, is named after him. Gödel's incompleteness theorem can be applied to any Turing-complete computational system, which may include the human brain.</p>
+	            </div>
+	            <div data-position="4">
+	                <h3>Tragic</h3>
+	                <p>Later in his life, Gödel suffered periods of mental instability and illness. He had an obsessive fear of being poisoned; he would eat only food that his wife, Adele, prepared for him. Late in 1977, she was hospitalized for six months and could no longer prepare her husband's food. In her absence, he refused to eat, eventually starving to death. He weighed 29 kilograms when he died. His death certificate reported that he died of "malnutrition and inanition caused by personality disturbance" in Princeton Hospital on January 14, 1978. He was buried in Princeton Cemetery.</p>
+	            </div>
+	        </div>
+	        <div class="slides">
+	            <img src="../images/home_bg.jpg" class="active" data-position="1" alt="">
+	            <img src="../images/about_bg.jpg" data-position="2" alt="">
+	            <img src="../images/legacies_bg.jpg" data-position="3" alt="">
+	            <img src="../images/tragic_bg.jpg" data-position="4" alt="">
+	        </div>
+	        <img src="../images/button.png" class="spinner-btn" alt="">
+	        <img src="../images/slides-overlay.jpg"  class="spinner" alt="">
+	    </div>
+	    
+	    <audio src="../sound/sound.mp3" id="slider-sound" preload="auto"></audio>
+<!--
+	    <audio id="slider-sound" preload="auto">
+            <source src="../sound/sound.mp3">
+	    </audio>
+-->
+	</div>
+
+   	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/jquery.rotatingSlideshow.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<script>
+        $(document).ready(function(){
+            $('.rotating-slideshow').rotatingSlideshow({
+                sliderHolder: '#slider-main',
+                btnsHolder: '#slider-btns',
+                audionHolder: '#slider-sound',
+                auto: true,
+                autoSpeed: '6000',
+            });
+        });
+	</script>
+        
+</body>
+</html>
